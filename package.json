@@ -1,0 +1,14 @@
+{
+  "name": "chirper",
+  "version": "0.1.0",
+  "description": "A very simple twitter clone built with react and flux",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Womack",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
