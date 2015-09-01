@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    browserify = require('browserify'),
+    browserify = require('gulp-browserify'),
     concat = require('gulp-concat'),
     plumber = require('gulp-plumber');
 
