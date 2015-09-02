@@ -29,13 +29,13 @@ passport.deserializeUser(function(cid, done) {
   done(null, users.get(cid));
 });
 
-var bodyParser = require('bodyParser'),
+var bodyParser = require('body-parser');
 var router = require('express').Router();
 
 //Application Middleware
 router.use(bodyParser.urlencoded({extended : true})); // Login Page
 router.use(bodyParser.json()); // API
-router.use('cookie-parser'());
+router.use(require('cookie-parser')());
 router.use(require('express-session')({
   secret : 'alsdkfjaoeiualdskjfa;ldksjfladskjf',
   resave : false,
@@ -43,3 +43,9 @@ router.use(require('express-session')({
 }));
 router.use(passport.initialize());
 router.use(passport.session());
+
+router.get('/login', function(req, res) {
+  res.render('login');
+});
+
+exports.routes = router;
