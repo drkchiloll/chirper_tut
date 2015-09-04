@@ -81,6 +81,10 @@ router.get('/logout', function(req, res) {
   res.redirect('/login');
 });
 
+router.get('/api/users', function(req, res) {
+  res.json(users.toArray().map(makeUserSafe));
+})
+
 function loginRequired(req, res, next) {
   if(req.isAuthenticated()) {
     next();

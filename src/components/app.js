@@ -1,4 +1,5 @@
-var React = require('react');
+var React = require('react'),
+    RouteHandler = require('react-router').RouteHandler;
 
 var App = module.exports = React.createClass({
   render : function() {
@@ -13,7 +14,7 @@ var App = module.exports = React.createClass({
                 </div>
 
                 <div className='nine columns'>
-                  Nested Content Coming
+                  <RouteHandler/>
                 </div>
               </div>
             </div>)
