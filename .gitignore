@@ -4,3 +4,4 @@ node_modules
 files/*
 public/lib/*
 .data/*
+public/main.js
