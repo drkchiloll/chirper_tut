@@ -9,7 +9,7 @@ Object.keys(constants).forEach(function(key) {
 
   exports[funcName] = function(data) {
     dispatcher.dispatch({
-      actionType : constant[key],
+      actionType : constants[key],
       data : data
     });
   };
