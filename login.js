@@ -7,7 +7,7 @@ var db = new LocallyDB('./.data');
 var users = db.collection('users');
 
 function hash(password) {
-  return crypto.createhash('sha512').update(password).digest('hex');
+  return crypto.createHash('sha512').update(password).digest('hex');
 }
 
 passport.use(new LocalStrategy(function(username, password, done) {
@@ -71,7 +71,7 @@ router.post('/signup', function(req, res) {
   }
 });
 
-router.post('/login', passport.authenticated('local', {
+router.post('/login', passport.authenticate('local', {
   successRedirect : '/',
   failureRedirect : '/login'
 }));
