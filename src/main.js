@@ -6,7 +6,7 @@ var API = require('./api');
 var routes = (<Route handler={require('./components/App')}>
                 <Route name='home' path='/' handler={require('./components/Home')}/>
                 <Route name='users' handler={require('./components/UserList')}/>
-                <Route name='user' path='/user/:id' handler={require('./components/Home')}/>
+                <Route name='user' path='/user/:id' handler={require('./components/UserProfile')}/>
               </Route>
              );
 
