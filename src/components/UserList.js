@@ -12,12 +12,7 @@ var UserList = module.exports = React.createClass({
       user : UserStore.currentUser
     }
   },
-  componentDidMount : function() {
-    UserStore.addChangeListener(this.onChange);
-  },
-  componentWillUnmount : function() {
-    UserStore.removeChangeListener(this.onChange);
-  },
+  mixin : [UserStore.mixin],
   onChange : function() {
     this.setState(this.getInitialState());
   },
