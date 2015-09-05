@@ -1,5 +1,6 @@
 var React = require('react'),
-    RouteHandler = require('react-router').RouteHandler;
+    RouteHandler = require('react-router').RouteHandler,
+    Navigation = require('./Navigation');
 
 var App = module.exports = React.createClass({
   render : function() {
@@ -10,7 +11,7 @@ var App = module.exports = React.createClass({
 
               <div className='row'>
                 <div className='three columns'>
-                  Navigation
+                  <Navigation/>
                 </div>
 
                 <div className='nine columns'>
