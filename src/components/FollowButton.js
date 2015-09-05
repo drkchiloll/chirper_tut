@@ -5,7 +5,7 @@ var React = require('react'),
 var FollowButton = module.exports = React.createClass({
   getInitialState : function() {
     return {
-      id : UserStore.currentUser.id,
+      id : UserStore.currentUser.cid,
       currentlyFollowing : UserStore.currentUser.following
     };
   },
@@ -41,6 +41,6 @@ var FollowButton = module.exports = React.createClass({
     actions.unfollow(this.props.userId);
   },
   follow : function() {
-    actions.follow(this.props.userId);    
+    actions.follow(this.props.userId);
   }
 })
