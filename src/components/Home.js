@@ -7,7 +7,7 @@ var ChirpStore = require('../stores/chirps');
 var Home = module.exports = React.createClass({
   getInitialState : function() {
     return {
-      chirps : ChirpStore.all()
+      chirps : ChirpStore.timeline()
     };
   },
   componentDidMount : function() {
